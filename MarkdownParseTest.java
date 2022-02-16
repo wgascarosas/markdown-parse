@@ -16,11 +16,11 @@ public class MarkdownParseTest {
 
     @Test
     public void testGetLinks() throws IOException {
-        Path filename = Path.of("test-file2.md");
+        Path filename = Path.of("test-file.md");
         String contents = Files.readString(filename);
         assertEquals(MarkdownParse.getLinks(contents), List.of("https://something.com", "some-page.html"));
 
-        filename = Path.of("test-file.md");
+        filename = Path.of("test-file2.md");
         contents = Files.readString(filename);
         assertEquals(MarkdownParse.getLinks(contents), List.of("https://something.com", "some-page.html", "hello"));
 
