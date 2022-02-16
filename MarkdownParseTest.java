@@ -22,7 +22,7 @@ public class MarkdownParseTest {
 
         filename = Path.of("test-file.md");
         contents = Files.readString(filename);
-        assertEquals(MarkdownParse.getLinks(contents), List.of("https://something.com", "some-page.html"));
+        assertEquals(MarkdownParse.getLinks(contents), List.of("https://something.com", "some-page.html", "hello"));
 
         filename = Path.of("test-file3.md");
         contents = Files.readString(filename);
